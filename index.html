@@ -6,13 +6,16 @@
     body {
       background-color: lightblue;
     }
-    
-    .tabs {
-      display: flex;
-      align-items: center;
+
+    .tabs-container {
       background-image: url("imagefundo.png");
       background-repeat: no-repeat;
       background-size: cover;
+    }
+
+    .tabs {
+      display: flex;
+      align-items: center;
       padding: 12px;
     }
     
@@ -32,9 +35,11 @@
   </style>
 </head>
 <body>
-  <div class="tabs">
-    <div class="tab" id="curriculo-emprego-tab" onclick="openTab('curriculo-emprego')">Currículo Emprego</div>
-    <div class="tab" id="linhas-tab" onclick="openTab('linhas')">Linhas</div>
+  <div class="tabs-container">
+    <div class="tabs">
+      <div class="tab" id="curriculo-emprego-tab" onclick="openTab('curriculo-emprego')">Currículo Emprego</div>
+      <div class="tab" id="linhas-tab" onclick="openTab('linhas')">Linhas</div>
+    </div>
   </div>
   
   <div id="curriculo-emprego" class="tabcontent">
