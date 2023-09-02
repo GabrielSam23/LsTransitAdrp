@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transporte Público</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+    
+    img {
+      max-width: 50%;
+      height: auto;
+    }
+    
+    .tabs {
+      background-color: darkblue;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    
+    .tab {
+      background-color: darkblue;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .tab:hover {
+      background-color: navy;
+    }
+    
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border: 1px solid black;
+      background-color: white;
+    }
+    
+    .linha-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid black;
+      background-color: white;
+    }
+  </style>
+  <script>
+    function openTab(tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "darkblue";
+        tablinks[i].style.color = "white";
+      }
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(tabName + "-tab").style.backgroundColor = "white";
+      document.getElementById(tabName + "-tab").style.color = "black";
+    }
+    
+    function openLinha(linha) {
+      var linhaContent = document.getElementById("linha-" + linha);
+      linhaContent.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab" id="curriculo-emprego-tab" onclick="openTab('curriculo-emprego')">Currículo Emprego</div>
+    <div class="tab" id="linhas-tab" onclick="openTab('linhas')">Linhas</div>
+  </div>
+  
+  <div id="curriculo-emprego" class="tabcontent">
+    <!-- Conteúdo da aba "Currículo Emprego" -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Currículo Emprego</title>
+    </head>
+    <body>
+      <!-- Seu conteúdo do currículo aqui -->
+    </body>
+    </html>
+  </div>
+  
+  <div id="linhas" class="tabcontent">
+    <!-- Conteúdo da aba "Linhas" -->
+    <h1>Linha 77 UNITY-STATION/PERSHING-SQUARE</h1>
+    <button onclick="openLinha('77')">Ver Linha</button>
+    
+    <h1>Linha 78 EXEMPLO-LINHA</h1>
+    <button onclick="openLinha('78')">Ver Linha</button>
+    
+    <h1>Linha 79 OUTRA-LINHA</h1>
+    <button onclick="openLinha('79')">Ver Linha</button>
+  </div>
+  
+  <div id="linha-77" class="linha-content">
+    <!-- Conteúdo da Linha 77 -->
+    <h1>Linha 77 UNITY-STATION/PERSHING-SQUARE</h1>
+    <img src="rotaLeste.png" alt="Imagem Linha 77">
+    <h2>Informações da Linha 77 Unity-Station/Pershing-Square</h2>
+    <ul>
+      <li>Tarifas: $2</li>
+      <li>Paradas: Willowfield > Playa Del Seville > East Beach > Los Flores > Jefferson > Ganton > Hospital > Glen Park > Mullholand > Downtown > Pershing Square</li>
+    </ul>
+  </div>
+  
+  <div id="linha-78" class="linha-content">
+    <!-- Conteúdo da Linha 78 -->
+    <h1>Linha 78 EXEMPLO-LINHA</h1>
+    <img src="rotaOeste.png" alt="Imagem Linha 78">
+    <h2>Informações da Linha 78 Exemplo-Linha</h2>
+    <ul>
+      <li>Tarifas: $2</li>
+      <li>Paradas: Exemplo1 > Exemplo2 > Exemplo3 > Exemplo4 > Exemplo5</li>
+    </ul>
+  </div>
+  
+  <div id="linha-79" class="linha-content">
+    <!-- Conteúdo da Linha 79 -->
+    <h1>Linha 79 OUTRA-LINHA</h1>
+    <img src="rotaNorte.png" alt="Imagem Linha 79">
+    <h2>Informações da Linha 79 Outra-Linha</h2>
+    <ul>
+      <li>Tarifas: $2</li>
+      <li>Paradas: Outra1 > Outra2 > Outra3 > Outra4 > Outra5</li>
+    </ul>
+  </div>
+  
+  <script>
+    // Abre a aba "Linhas" por padrão
+    openTab('linhas');
+  </script>
+</body>
+</html>
