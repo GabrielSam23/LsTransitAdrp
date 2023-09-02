@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transporte Público</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+    
+    img {
+      max-width: 50%;
+      height: auto;
+    }
+    
+    .tab {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+    
+    .tabcontent {
+      display: none;
+      padding: 20px;
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    function openTab(tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "white";
+        tablinks[i].style.color = "black";
+      }
+      document.getElementById(tabName).style.display = "block";
+      document.getElementById(tabName + "-tab").style.backgroundColor = "lightblue";
+      document.getElementById(tabName + "-tab").style.color = "white";
+    }
+  </script>
+</head>
+<body>
+  <div class="tab" id="curriculo-emprego-tab" onclick="openTab('curriculo-emprego')">Currículo Emprego</div>
+  <div class="tab" id="linhas-tab" onclick="openTab('linhas')">Linhas</div>
+  
+  <div id="curriculo-emprego" class="tabcontent">
+    <!-- Conteúdo da aba "Currículo Emprego" -->
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Currículo Emprego</title>
+    </head>
+    <body>
+      <!-- Seu conteúdo do currículo aqui -->
+    </body>
+    </html>
+  </div>
+  
+  <div id="linhas" class="tabcontent">
+    <!-- Conteúdo da aba "Linhas" -->
+    <h1>Linha 77 UNITY-STATION/PERSHING-SQUARE</h1>
+    <img src="rotaLeste.png" alt="Imagem Linha 101">
+    <h2>Informações da Linha 77 Unity-Station/Pershing-Square</h2>
+    <ul>
+      <li>Tarifas: $2</li>
+      <li>Paradas: Willowfield > Playa Del Seville > East Beach > Los Flores > Jefferson > Ganton > Hospital > Glen Park > Mullholand > Downtown > Pershing Square</li>
+    </ul>
+  </div>
+  
+  <script>
+    // Abre a aba "Linhas" por padrão
+    openTab('linhas');
+  </script>
+</body>
+</html>
