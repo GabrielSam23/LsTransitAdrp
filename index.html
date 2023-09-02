@@ -1,89 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Transporte Público</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: lightblue;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transporte Público</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("imagefundo.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
 
-    .tabs {
-      background-image: url("imagefundo.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding: 12px;
-    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
 
-    .tabs-container {
-      display: flex;
-      align-items: center;
-    }
-    
-    .tab {
-      margin-right: 10px;
-      padding: 8px 16px;
-      background-color: white;
-      cursor: pointer;
-    }
-    
-    .tabcontent {
-      display: none;
-      padding: 20px;
-      border: 1px solid black;
-      background-color: white;
-    }
-  </style>
+        .tabs {
+            display: flex;
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: lightgray;
+        }
+
+        .content {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-  <div class="tabs">
-    <div class="tabs-container">
-      <div class="tab" id="curriculo-emprego-tab" onclick="openTab('curriculo-emprego')">Currículo Emprego</div>
-      <div class="tab" id="linhas-tab" onclick="openTab('linhas')">Linhas</div>
+    <div class="container">
+        <h1>Transporte Público</h1>
+        <div class="tabs">
+            <div class="tab" onclick="openTab('curriculo-emprego')">Currículo Emprego</div>
+            <div class="tab" onclick="openTab('linhas')">Linhas</div>
+        </div>
+        <div id="curriculo-emprego" class="content">
+            <h2>Currículo Emprego</h2>
+            <!-- Conteúdo do currículo aqui -->
+        </div>
+        <div id="linhas" class="content">
+            <h2>Linhas</h2>
+            <h3>Linha 77 UNITY-STATION/PERSHING-SQUARE</h3>
+            <button onclick="toggleLinha('77')">Ver Linha</button>
+            <div id="linha-77" class="linha-content">
+                <!-- Conteúdo da linha 77 -->
+            </div>
+            <h3>Linha 78 EXEMPLO-LINHA</h3>
+            <button onclick="toggleLinha('78')">Ver Linha</button>
+            <div id="linha-78" class="linha-content">
+                <!-- Conteúdo da linha 78 -->
+            </div>
+        </div>
     </div>
-  </div>
-  
-  <div id="curriculo-emprego" class="tabcontent">
-    <!-- Conteúdo da aba "Currículo Emprego" -->
-    <h1>Currículo Emprego</h1>
-    <!-- Seu conteúdo do currículo aqui -->
-  </div>
-  
-  <div id="linhas" class="tabcontent">
-    <!-- Conteúdo da aba "Linhas" -->
-    <h1>Linha 77 UNITY-STATION/PERSHING-SQUARE</h1>
-    <button onclick="toggleLinha('77')">Ver Linha</button>
-    
-    <div id="linha-77" class="linha-content">
-      <!-- Conteúdo da linha 77 -->
-    </div>
-    
-    <h1>Linha 78 EXEMPLO-LINHA</h1>
-    <button onclick="toggleLinha('78')">Ver Linha</button>
-    
-    <div id="linha-78" class="linha-content">
-      <!-- Conteúdo da linha 78 -->
-    </div>
-  </div>
-  
-  <script>
-    function openTab(tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tab");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-      }
-      document.getElementById(tabName).style.display = "block";
-      document.getElementById(tabName + "-tab").classList.add("active");
-    }
-    
-    // Abre a aba "Linhas" por padrão
-    openTab('linhas');
-  </script>
+
+    <script>
+        function openTab(tabName) {
+            var tabs = document.querySelectorAll('.tab');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            document.getElementById(tabName).style.display = 'block';
+        }
+
+        function toggleLinha(linha) {
+            var linhaContent = document.getElementById('linha-' + linha);
+            linhaContent.style.display = linhaContent.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Abre a aba "Linhas" por padrão
+        openTab('linhas');
+    </script>
 </body>
 </html>
