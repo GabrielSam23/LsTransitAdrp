@@ -3,33 +3,24 @@
 <head>
   <title>Transporte Público</title>
   <style>
-    body {
-      background-color: lightblue;
-    }
-    
-    img {
-      max-width: 50%;
-      height: auto;
-    }
-    
     .tabs {
-      background-color: darkblue;
       display: flex;
-      justify-content: space-around;
+      align-items: center;
+      background-color: lightcoral;
       padding: 10px;
+    }
+    
+    .logo {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
     }
     
     .tab {
-      background-color: darkblue;
-      color: white;
       padding: 10px;
+      background-color: white;
       border: none;
       cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    
-    .tab:hover {
-      background-color: navy;
     }
     
     .tabcontent {
@@ -38,27 +29,18 @@
       border: 1px solid black;
       background-color: white;
     }
-  </style>
-  <script>
-    function openTab(tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tab");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "darkblue";
-        tablinks[i].style.color = "white";
-      }
-      document.getElementById(tabName).style.display = "block";
-      document.getElementById(tabName + "-tab").style.backgroundColor = "white";
-      document.getElementById(tabName + "-tab").style.color = "black";
+    
+    .linha-content {
+      display: none;
+      padding: 20px;
+      border: 1px solid black;
+      background-color: white;
     }
-  </script>
+  </style>
 </head>
 <body>
   <div class="tabs">
+    <img src="logo.png" alt="Logo da Empresa" class="logo">
     <div class="tab" id="curriculo-emprego-tab" onclick="openTab('curriculo-emprego')">Currículo Emprego</div>
     <div class="tab" id="linhas-tab" onclick="openTab('linhas')">Linhas</div>
   </div>
@@ -78,16 +60,54 @@
   
   <div id="linhas" class="tabcontent">
     <!-- Conteúdo da aba "Linhas" -->
-    <h1>Linha 77 teste/PERSHING-SQUARE</h1>
-    <img src="rotaLeste.png" alt="Imagem Linha 101">
-    <h2>Informações da Linha 77 Unity-Station/Pershing-Square</h2>
-    <ul>
-      <li>Tarifas: $2</li>
-      <li>Paradas: Willowfield > Playa Del Seville > East Beach > Los Flores > Jefferson > Ganton > Hospital > Glen Park > Mullholand > Downtown > Pershing Square</li>
-    </ul>
+    <h1>Linha 77 UNITY-STATION/PERSHING-SQUARE</h1>
+    <button onclick="toggleLinha('77')">Ver Linha</button>
+    
+    <div id="linha-77" class="linha-content" style="display: none;">
+      <img src="rotaLeste.png" alt="Imagem Linha 77">
+      <h2>Informações da Linha 77 Unity-Station/Pershing-Square</h2>
+      <ul>
+        <li>Tarifas: $2</li>
+        <li>Paradas: Willowfield > Playa Del Seville > East Beach > Los Flores > Jefferson > Ganton > Hospital > Glen Park > Mullholand > Downtown > Pershing Square</li>
+      </ul>
+    </div>
+    
+    <h1>Linha 78 EXEMPLO-LINHA</h1>
+    <button onclick="toggleLinha('78')">Ver Linha</button>
+    
+    <div id="linha-78" class="linha-content" style="display: none;">
+      <img src="rotaOeste.png" alt="Imagem Linha 78">
+      <h2>Informações da Linha 78 Exemplo-Linha</h2>
+      <ul>
+        <li>Tarifas: $2</li>
+        <li>Paradas: Exemplo1 > Exemplo2 > Exemplo3 > Exemplo4 > Exemplo5</li>
+      </ul>
+    </div>
   </div>
   
   <script>
+    function openTab(tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tab");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabName).style.display = "block";
+    }
+    
+    function toggleLinha(linhaId) {
+      var linhaContent = document.getElementById("linha-" + linhaId);
+      if (linhaContent.style.display === "none") {
+        linhaContent.style.display = "block";
+      } else {
+        linhaContent.style.display = "none";
+      }
+    }
+    
     // Abre a aba "Linhas" por padrão
     openTab('linhas');
   </script>
