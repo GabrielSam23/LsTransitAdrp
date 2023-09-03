@@ -1,0 +1,125 @@
+/* Estilos para o site Los Santos Transit */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333; /* Cor do texto principal */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-image: url('fundo.png'); /* Imagem de fundo do cabeçalho */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Cor do texto no cabeçalho */
+    text-align: center;
+    padding: 10% 0; /* Espaçamento interno */
+}
+
+.logo-empresa img {
+    max-width: 100%; /* Largura máxima do logotipo */
+    height: auto; /* Altura automática para manter a proporção */
+    display: block;
+    margin: 0 auto; /* Centralizar o logotipo horizontalmente */
+}
+
+.mensagem {
+    background-color: #333333; /* Preto acinzentado */
+    color: #fff; /* Cor do texto branco */
+    padding: 5%;
+    border-radius: 1em;
+    margin-top: 2em;
+}
+
+.mensagem h2 {
+    font-size: 4em;
+    color: #ff5500; /* Cor de destaque laranja */
+}
+
+.mensagem p {
+    font-size: 2em;
+}
+
+/* Estilos para a seção Apresentação da Empresa */
+.apresentacao {
+    background-color: #333333; /* Preto acinzentado */
+    padding: 5%;
+    margin: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #333; /* Fundo cinza escuro */
+    color: #fff; /* Cor do texto no rodapé */
+    text-align: center;
+    padding: 2em 0;
+}
+
+/* Estilos para links */
+a {
+    color: #ff5500; /* Cor de destaque laranja para links */
+    text-decoration: none;
+    transition: color 0.3s; /* Transição suave de cor no hover */
+}
+
+a:hover {
+    color: #ff4400; /* Cor de destaque laranja mais escura no hover */
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho img {
+    max-width: 100%; /* Largura máxima do logotipo */
+    height: auto; /* Altura automática para manter a proporção */
+    display: block;
+    margin: 0 auto; /* Centralizar o logotipo horizontalmente */
+    margin-bottom: 2em; /* Espaçamento abaixo do logotipo */
+}
+
+/* Estilos para as abas */
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 0; /* Redefina o espaçamento interno do cabeçalho para telas menores */
+        height: auto; /* Defina a altura automática para o cabeçalho */
+    }
+
+    .logo-empresa img {
+        max-width: 80%; /* Reduza a largura máxima do logotipo */
+        max-height: 100px; /* Defina a altura máxima do logotipo */
+    }
+
+    .mensagem h2 {
+        font-size: 2em; /* Reduza o tamanho da fonte para o cabeçalho */
+    }
+
+    .mensagem p {
+        font-size: 1.5em; /* Reduza o tamanho da fonte para o texto */
+    }
+
+    .apresentacao {
+        padding: 10%; /* Redefina o espaçamento interno para a seção de apresentação */
+    }
+
+    /* Adicione outras regras de estilo para telas menores aqui */
+}
+
+/* Estilos para o site Los Santos Transit */
+/* ... (outros estilos) ... */
+
+/* Estilos para a imagem responsiva */
+.mensagem img {
+    max-width: 100%; /* Torna a imagem responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaçamento indesejado na parte inferior da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+}
+
+/* ... (outros estilos) ... */

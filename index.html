@@ -1,105 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transporte Público</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Los Santos Transit</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-image: url("imagefundo.png");
-            background-repeat: no-repeat;
-            background-size: cover;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.7);
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .tabs {
-            display: flex;
-            background-color: white;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .tab {
-            flex: 1;
-            text-align: center;
-            padding: 10px 0;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .tab:hover {
-            background-color: lightgray;
-        }
-
-        .content {
-            display: none;
-            padding: 20px 0;
-        }
-
-        .active {
-            display: block;
+            background-color: #666666; /* Cor de fundo cinza escuro */
+            color: #000000; /* Texto em preto */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Transporte Público</h1>
-        <div class="tabs">
-            <div class="tab" onclick="openTab('curriculo-emprego')">Currículo Emprego</div>
-            <div class="tab" onclick="openTab('linhas')">Linhas</div>
-        </div>
-        <div id="curriculo-emprego" class="content">
-            <h2>Currículo Emprego</h2>
-            <!-- Conteúdo do currículo aqui -->
-        </div>
-        <div id="linhas" class="content">
-            <h2>Linhas</h2>
-            <h3>Linha 77 UNITY-STATION/PERSHING-SQUARE</h3>
-            <button onclick="toggleLinha('77')">Ver Linha</button>
-            <div id="linha-77" class="linha-content">
-                <!-- Conteúdo da linha 77 -->
+    <header>
+        <div class="cabecalho">
+            <img src="sua_logo.png" alt="Logo Los Santos Transit">
+            <div class="titulo">
+                <h1>Los Santos Transit</h1>
+                <p></p>
             </div>
-            <h3>Linha 78 EXEMPLO-LINHA</h3>
-            <button onclick="toggleLinha('78')">Ver Linha</button>
-            <div id="linha-78" class="linha-content">
-                <!-- Conteúdo da linha 78 -->
+            <div class="linhas">
+                <p></p>
+                <p></p>
+            </div>
+            <nav>
+                <ul class="abas">
+                    <li><a href="#pagina-inicial">Página Inicial</a></li>
+                    <li><a href="#linhas">Linhas</a></li>
+                    <li><a href="#serviços">Aba de Serviços</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="pagina-inicial">
+        <div class="bloco-roxo">
+            <div class="logo-empresa">
+                <img src="" alt="">
+            </div>
+            <div class="mensagem">
+                <h2 style="font-size: 36px; margin-bottom: 20px;">BEM-VINDO A LOS SANTOS TRANSIT</h2>
+                <p style="font-size: 24px;">A MAIOR EMPRESA DE TRANSPORTE PÚBLICO DE SAN ANDREAS</p>
+                <p>Somos a principal empresa de transporte urbano e regional de Los Santos. Há mais de duas décadas, fornecemos soluções confiáveis e sustentáveis de mobilidade para a comunidade. Nossos motoristas profissionais e frota moderna garantem que você chegue ao seu destino com eficiência e cortesia. Descubra nossos serviços de transporte público, entrega de mercadorias e muito mais. Seja parte da nossa jornada rumo a um transporte de qualidade em San Andreas.</p>
+                <div class="teste">
+                    <img src="testeai.png" alt="testerian">
+                </div>
             </div>
         </div>
-    </div>
+    <!-- Resto da sua seção de apresentação da empresa aqui -->
+    </section>
+
+    <section id="linhas" style="display: none;"> 
+    </section>
+
+    <section id="servicos" style="display: none;"> <!-- Esta seção está oculta por padrão -->
+        <!-- Conteúdo da página "Serviços" aqui -->
+    </section>
+
+    <footer>
+        <!-- Conteúdo do rodapé aqui -->
+        <img src="imagem_rodape.jpg" alt="">
+        <p>&copy; 2023 Los Santos Transit</p>
+    </footer>
 
     <script>
-        function openTab(tabName) {
-            var tabs = document.querySelectorAll('.tab');
-            tabs.forEach(function(tab) {
-                tab.classList.remove('active');
+        // Função para mostrar a seção desejada ao clicar nas abas
+        function mostrarSecao(secaoId) {
+            const secoes = document.querySelectorAll('section');
+            secoes.forEach(secao => {
+                if (secao.id === secaoId) {
+                    secao.style.display = 'block';
+                } else {
+                    secao.style.display = 'none';
+                }
             });
-
-            var contents = document.querySelectorAll('.content');
-            contents.forEach(function(content) {
-                content.style.display = 'none';
-            });
-
-            document.getElementById(tabName).classList.add('active');
-            document.getElementById(tabName).style.display = 'block';
         }
 
-        function toggleLinha(linha) {
-            var linhaContent = document.getElementById('linha-' + linha);
-            linhaContent.style.display = linhaContent.style.display === 'block' ? 'none' : 'block';
-        }
-
-        // Abre a aba "Linhas" por padrão
-        openTab('linhas');
+        // Adicione um evento de clique às abas para mostrar as seções correspondentes
+        const abas = document.querySelectorAll('.abas a');
+        abas.forEach(aba => {
+            aba.addEventListener('click', (event) => {
+                event.preventDefault();
+                const secaoId = event.target.getAttribute('href').substring(1);
+                mostrarSecao(secaoId);
+            });
+        });
     </script>
 </body>
 </html>
