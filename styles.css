@@ -6,7 +6,7 @@ body {
     color: #333; /* Cor do texto principal */
 }
 
-/* Estilos para o cabeçaalho */
+/* Estilos para o cabeçalho */
 header {
     background-image: url('fundo.png'); /* Imagem de fundo do cabeçalho */
     background-size: cover;
@@ -115,13 +115,11 @@ a:hover {
 /* ... (outros estilos) ... */
 
 /* Estilos para a imagem responsiva */
-/* Estilos para a imagem responsiva */
 .mensagem img {
-    max-width: 200%; /* Aumenta a largura da imagem */
+    max-width: 100%; /* Torna a imagem responsiva */
     height: auto; /* Mantém a proporção da imagem */
     display: block; /* Remove espaçamento indesejado na parte inferior da imagem */
     margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
-
 
 /* ... (outros estilos) ... */
