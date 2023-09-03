@@ -23,7 +23,7 @@ header {
 
 .logo-empresa img {
     max-width: 100%;
-    height: auto;
+    height: 0px;
     display: block;
     margin: 0 auto; /* Centralizar o logotipo horizontalmente */
     margin-bottom: 1rem; /* Espaçamento abaixo do logotipo */
@@ -39,12 +39,22 @@ header {
 }
 
 .mensagem h2 {
-    font-size: 1.5rem; /* Tamanho do texto do cabeçalho */
+    font-size: 1.5rem; /* Reduza um pouco o tamanho da fonte para o cabeçalho */
     color: #ff5500; /* Cor de destaque laranja */
 }
 
 .mensagem p {
-    font-size: 1rem; /* Tamanho do texto do parágrafo */
+    font-size: 1rem; /* Reduza o tamanho da fonte para o texto */
+}
+
+/* Estilos para a seção Apresentação da Empresa */
+.apresentacao {
+    background-color: #333333; /* Preto acinzentado */
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); /* Sombra suave */
+    text-align: center; /* Centralizar o texto */
 }
 
 /* Estilos para o rodapé */
@@ -92,20 +102,24 @@ a:hover {
 /* Estilos responsivos */
 @media (max-width: 768px) {
     header {
-        padding: 160px 0; /* Redefina o espaçamento interno do cabeçalho para telas menores */
+        padding: 10% 0; /* Redefina o espaçamento interno do cabeçalho para telas menores */
     }
 
     .logo-empresa img {
-        max-width: 400px; /* Reduza a largura máxima do logotipo */
+        max-width: 50%; /* Reduza a largura máxima do logotipo */
         max-height: 100px; /* Defina a altura máxima do logotipo */
     }
 
     .mensagem h2 {
-        font-size: 20px; /* Reduza o tamanho da fonte para o cabeçalho */
+        font-size: 1rem; /* Reduza o tamanho da fonte para o cabeçalho */
     }
 
     .mensagem p {
-        font-size: 24px; /* Reduza o tamanho da fonte para o texto */
+        font-size: 1.2rem; /* Reduza o tamanho da fonte para o texto */
+    }
+
+    .apresentacao {
+        padding: 10%; /* Redefina o espaçamento interno para a seção de apresentação */
     }
 }
 
@@ -132,19 +146,109 @@ footer img {
     height: auto;
 }
 
-/* Estilos adicionais */
-.texto-esquerdo {
+.discord img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Para alinhar uma imagem para o lado direito */
+img.logo {
+    width: 50px;
+    height: auto;
+}
+
+img.alterar {
+    width: 100px;
+    height: auto;
+}
+
+img.cidade {
+    float: right;
+    width: 600px;
+    height: auto;
+}
+
+/* Adicione margem à direita do texto em relação à imagem */
+
+.texto {
+    float: left;
+    margin-right: 20px; /* Ajuste conforme necessário */
+}
+
+.destacado {
+    color: #ff5500; /* Cor laranja */
+    font-size: 50em; /* Tamanho grande */
+    text-align: center; /* Centralizar o texto horizontalmente */
+    display: block; /* Faz com que o texto ocupe toda a largura disponível */
+    margin: 0 auto; /* Centralizar o bloco no meio da página */
+    font-weight: bold; /* Pode adicionar negrito para maior destaque, se desejar */
+}
+
+.fundo img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave à imagem */
+    border-radius: 30px; /* Arredonda as bordas da imagem */
+}
+
+.fundo {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.destacado {
+  color: orange;
+  font-size: 24px;
+}
+
+ .texto-esquerdo {
+        text-align: left;
+    }
+    .espacamento {
+        margin-bottom: 50px; /* Adicione o espaçamento inferior desejado em pixels */
+    }
+    .espacamento2 {
+        margin-top: 50px; /* Adicione o espaçamento superior desejado em pixels */
+    }
+
+     .destacado2 {
+        margin-top: 60px; /* Adicione o espaçamento superior desejado em pixels */
+    }
+
+      .destacado2 {
+        margin-top: 60px; /* Adicione o espaçamento superior desejado em pixels */
+    }
+
+.linhas h2 {
+    font-size: 1.5rem; /* Reduza um pouco o tamanho da fonte para o cabeçalho */
+    color: #ff5500; /* Cor de destaque laranja */
+    text-align: center;
+}
+
+.linha3 h2 {
+    color: #87cefa; /* Cor de destaque laranja */
     text-align: left;
 }
 
-.espacamento {
-    margin-bottom: 50px; /* Adicione o espaçamento inferior desejado em pixels */
+.inforota h2 {
+    color: #87cefa; /* Cor de destaque laranja */
+    text-align: right;
 }
 
-.espacamento2 {
-    margin-top: 50px; /* Adicione o espaçamento superior desejado em pixels */
+.linha3 {
+  max-width: 100%;
+  height: auto;
 }
 
-.destacado2 {
-    margin-top: 60px; /* Adicione o espaçamento superior desejado em pixels */
+.imagem-responsiva {
+    float: left;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
