@@ -168,7 +168,7 @@ footer img {
     position: absolute; /* Posiciona a imagem de forma absoluta em relação ao rodapé */
     bottom: 12; /* Alinha a parte inferior da imagem ao fundo do rodapé */
     right: 0; /* Alinha a imagem à direita do rodapé */
-    max-width: 5%; /* Defina a largura máxima da imagem (ajuste conforme necessário) */
+    max-width: 100%; /* Defina a largura máxima da imagem (ajuste conforme necessário) */
     height: 50px; /* Altura automática para manter a proporção */
 }
 
