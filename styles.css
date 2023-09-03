@@ -125,11 +125,10 @@ a:hover {
 /* ... (outros estilos) ... */
 
 .imagem-de-fundo {
-    position: fixed; /* Mantém a imagem fixa na tela */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Cobrir toda a largura da tela mantendo a proporção */
-    z-index: -1; /* Enviar para o plano de fundo */
+  background-image: url(testeai.png);
+  background-size: 2000px   ;
+  width: 3000px;
+  height: 5000px;
+  border: 0px solid;
+  color: pink;
 }
