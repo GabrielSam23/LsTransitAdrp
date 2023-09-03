@@ -33,12 +33,12 @@ header {
 }
 
 .mensagem h2 {
-    font-size: 3em; /* Reduza um pouco o tamanho da fonte para o cabeçalho */
+    font-size: 1em; /* Reduza um pouco o tamanho da fonte para o cabeçalho */
     color: #ff5500; /* Cor de destaque laranja */
 }
 
 .mensagem p {
-    font-size: 1.5em; /* Reduza o tamanho da fonte para o texto */
+    font-size: 1em; /* Reduza o tamanho da fonte para o texto */
 }
 
 /* Estilos para a seção Apresentação da Empresa */
@@ -53,10 +53,10 @@ header {
 
 /* Estilos para o rodapé */
 footer {
-    background-color: #222; /* Cor de fundo mais escura para o rodapé */
-    color: #fff; /* Cor do texto no rodapé */
-    text-align: center;
-    padding: 2em 0;
+        background-color: #333333; /* Cor de fundo mais escura para o rodapé */
+        color: ##333333; /* Cor do texto no rodapé */
+        text-align: center;
+        padding: 2em 0;
 }
 
 /* Estilos para links */
@@ -78,8 +78,8 @@ a:hover {
 }
 
 .cabecalho img {
-    max-width: 80%; /* Reduza um pouco a largura máxima do logotipo */
-    height: auto; /* Altura automática para manter a proporção */
+    max-width: 100%; /* Reduza um pouco a largura máxima do logotipo */
+    height: 100px; /* Altura automática para manter a proporção */
     display: block;
     margin: 0 auto; /* Centralizar o logotipo horizontalmente */
     margin-bottom: 1em; /* Espaçamento abaixo do logotipo */
@@ -160,7 +160,7 @@ a:hover {
 /* Estilos para a imagem de fundo no rodapé */
 footer {
     position: relative; /* Permite posicionar elementos filhos relativamente a este elemento pai */
-    background-color: #666666; /* Mesma cor de fundo da página */
+    background-color: #333333; /* Mesma cor de fundo da página */
     color: #000000; /* Texto em preto */
 }
 
