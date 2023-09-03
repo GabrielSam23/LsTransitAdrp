@@ -137,7 +137,9 @@ a:hover {
     max-width: 100%; /* Torna a imagem responsiva */
     height: auto; /* Mantém a proporção da imagem */
     display: block; /* Remove espaçamento indesejado na parte inferior da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
+
 
 /* Estilos para tornar o site responsivo ao zoom ou resolução */
 @media (max-width: 1024px) {
@@ -153,14 +155,6 @@ a:hover {
 
 /* Estilos para a imagem responsiva */
 /* Estilos para a imagem responsiva */
-.mensagem img {
-    max-width: 100%; /* Torna a imagem responsiva */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove espaçamento indesejado na parte inferior da imagem */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    filter: brightness(0.8) blur(0.5px); /* Aplica um efeito de escurecimento e desfoque suave */
-}
-
 /* ... (outros estilos) ... */
 
 /* Estilos para a imagem de fundo no rodapé */
@@ -176,4 +170,11 @@ footer img {
     right: 0; /* Alinha a imagem à direita do rodapé */
     max-width: 5%; /* Defina a largura máxima da imagem (ajuste conforme necessário) */
     height: 50px; /* Altura automática para manter a proporção */
+}
+
+.discord img {
+    max-width: 100%; /* Torna a imagem responsiva */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaçamento indesejado na parte inferior da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
 }
