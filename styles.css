@@ -124,14 +124,12 @@ a:hover {
 
 /* ... (outros estilos) ... */
 
-/* Estilos para a imagem ampliada */
-.imagem-ampliada {
-    width: 100vw; /* Largura igual à largura da viewport */
-    height: auto; /* Altura automática para manter a proporção */
-    display: block; /* Remove espaçamento indesejado na parte inferior da imagem */
-    margin: 0; /* Remove qualquer margem */
-    position: absolute; /* Posição absoluta para cobrir toda a largura da tela */
-    top: 0; /* Alinhar no topo */
-    left: 0; /* Alinhar à esquerda */
+.imagem-de-fundo {
+    position: fixed; /* Mantém a imagem fixa na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cobrir toda a largura da tela mantendo a proporção */
     z-index: -1; /* Enviar para o plano de fundo */
 }
