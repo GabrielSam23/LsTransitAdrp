@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Los Santos Transit</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #222; /* Cor de fundo cinza escuro */
+            color: #000000; /* Texto em preto */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="cabecalho">
+            <img src="sua_logo.png" class=alterar>
+            <div class="titulo">
+                <h1>Los Santos Transit</h1>
+                <p></p>
+            </div>
+            <div class="linhas">
+                <p></p>
+                <p></p>
+            </div>
+            <nav>
+                <ul class="abas">
+                    <li><a href="#pagina-inicial">Página Inicial</a></li>
+                    <li><a href="#linhas">Linhas</a></li>
+                    <li><a href="#serviços">Aba de Serviços</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="pagina-inicial">
+        <div class="bloco-roxo">
+            <div class="logo-empresa">
+                <img src="" alt="">
+            </div>
+            <div class="mensagem">
+                <h2 style="font-size: 36px; margin-bottom: 20px;">BEM-VINDO A LOS SANTOS TRANSIT</h2>
+                <p style="font-size: 24px;">A MAIOR EMPRESA DE TRANSPORTE PÚBLICO DE SAN ANDREAS</p>
+                <p>Somos a principal empresa de transporte urbano e regional de Los Santos. Há mais de duas décadas, fornecemos soluções confiáveis e sustentáveis de mobilidade para a comunidade. Nossos motoristas profissionais e frota moderna garantem que você chegue ao seu destino com eficiência e cortesia. Descubra nossos serviços de transporte público, entrega de mercadorias e muito mais. Seja parte da nossa jornada rumo a um transporte de qualidade em San Andreas.</p>
+                <div class="teste">
+                   <img src="testeai.png" alt="Imagem de Fundo" class="fundo">
+                <img src="ls.png" class=cidade>
+                <h2 style="font-size: 36px; margin-bottom: 20px;">Explorando as Abas</h2>
+                 <p class="espaco2" style="font-size: 25px;">No topo da página, você encontrará as abas "Início", "Linhas" e "Serviços". Cada aba tem uma finalidade específica:</p>
+                 <div class="texto-esquerdo">
+               <p class="espacamento" style="font-size: 15px;">* Início: Aqui, você encontrará informações gerais sobre a Los Santos Transit, incluindo nossa história e compromisso com a mobilidade na comunidade.</p>
+                 <p class="destacado2" style="font-size: 15px;">* Linhas: Navegue por nossas rotas de transporte público. Descubra horários, paradas e itinerários detalhados para planejar sua jornada.</p>
+                 <p class="espacamento2" style="font-size: 15px;">Serviços: Explore nossos serviços especiais, como entregas de mercadorias, aluguel de veículos e muito mais. Temos soluções personalizadas para atender às suas necessidades.</p>
+		<p> Feito por GabrielPassos<p>
+                 </div>
+                <p>
+                </div>
+            </div>
+        </div>
+    <!-- Resto da sua seção de apresentação da empresa aqui -->
+    </section>
+
+    <section id="linhas" style="display: none;"> 
+        <div class="linhas">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Aba Linhas</h2>
+            <div>
+            <div class="linha3">
+            <h2>LSTRANSIT 77 | Unity-Station/Pershing-Square</h2>
+            <img src="rotaleste.png" class="imagem-responsiva">
+        </div>
+        <div class="inforota">
+            <div>
+    </section>
+
+    <section id="servicos" style="display: none;"> <!-- Esta seção está oculta por padrão -->
+        <!-- Conteúdo da página "Serviços" aqui -->
+    </section>
+
+    <script>
+        // Função para mostrar a seção desejada ao clicar nas abas
+        function mostrarSecao(secaoId) {
+            const secoes = document.querySelectorAll('section');
+            secoes.forEach(secao => {
+                if (secao.id === secaoId) {
+                    secao.style.display = 'block';
+                } else {
+                    secao.style.display = 'none';
+                }
+            });
+        }
+
+        // Adicione um evento de clique às abas para mostrar as seções correspondentes
+        const abas = document.querySelectorAll('.abas a');
+        abas.forEach(aba => {
+            aba.addEventListener('click', (event) => {
+                event.preventDefault();
+                const secaoId = event.target.getAttribute('href').substring(1);
+                mostrarSecao(secaoId);
+            });
+        });
+    </script>
+</body>
+</html>
