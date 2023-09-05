@@ -1,9 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="sua_logo.png" type="image/png">
     <title>Los Santos Transit</title>
     <style>
         body {
@@ -12,14 +13,97 @@
             background-color: #222; /* Cor de fundo cinza escuro */
             color: #000000; /* Texto em preto */
         }
+
+        /* Estilo para o contêiner branco no topo */
+        .topo-branco {
+            height: 5vh; /* Altura do espaço em branco no topo da página */
+            background-color: #fff; /* Cor de fundo branca */
+        }
+
+        .cabecalho-grande {
+            height: 50vh; /* Define a altura do cabeçalho como metade da altura da viewport */
+            position: relative; /* Permite posicionar os elementos filhos de forma absoluta */
+        }
+
+        .cabecalho-grande::before {
+            content: ""; /* Cria um pseudo-elemento antes do conteúdo do cabeçalho */
+            position: absolute; /* Posiciona o pseudo-elemento de forma absoluta */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo do cabeçalho */
+            animation: imagens-passando 50s initial; /* Define a animação das imagens passando no fundo */
+            background-image: url('fundo.png'), url('rotaaero.png'), url('ls.png'); /* Adicione as URLs das imagens desejadas */
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes imagens-passando {
+            0% {
+                background-position: 0 0; /* Inicia a animação com as imagens na posição inicial */
+            }
+            100% {
+                background-position: 100% 0; /* Termina a animação com as imagens na posição final */
+            }
+        }
+        
+        .icone-pagina-inicial {
+            display: flex;
+            align-items: center;
+            margin-left: 15px; /* Espaçamento à esquerda do ícone */
+        }
+
+        .icone-pagina-inicial img {
+            width: 20px; /* Largura do ícone */
+            height: 20px; /* Altura do ícone */
+            margin-right: 2px; /* Espaçamento à direita do ícone */
+        }
+
+        .icone-servicos {
+            display: flex;
+            align-items: center;
+            margin-left: 0px; /* Espaçamento à esquerda do ícone */
+        }
+
+        .icone-servicos img {
+            width: 20px; /* Largura do ícone */
+            height: 20px; /* Altura do ícone */
+            margin-right: -20px; /* Espaçamento à direita do ícone */
+        }
     </style>
 </head>
 <body>
+    <div class="topo-branco">
+        <img src="sua_logo.png" class="logo">
+        <ul class="abas">
+            <li class="icone-pagina-inicial">
+                <img src="inicial.png" alt="Ícone Página Inicial">
+                <a href="#pagina-inicial">Página Inicial</a>
+            </li>
+            <li class="icone-servicos">
+                    <img src="linhalogo.png">
+                    <div>
+            <li class="dropdown"> <!-- Adiciona uma classe "dropdown" para criar o efeito de subcategorias -->
+                <a href="javascript:void(0)" class="dropbtn">Linhas </a>
+                <div class="dropdown-content"> <!-- Conteúdo das subcategorias -->
+                    <a href="#linha1">Line 77</a>
+                    <a href="#linha2">Line 88</a>
+                    <a href="#linha3">Line 102</a>
+                    <div>
+                        <li class="aba-servicos">
+                            <img src="logoservicos.png">
+                    <li><a href="#serviços">Aba de Serviços</a></li>
+                </div>
+            </li>
+        </ul>
+    </div>
+
     <header>
-        <div class="cabecalho">
-            <img src="sua_logo.png" class=alterar>
+        <div class="cabecalho cabecalho-grande">
+            <img src="" class="alterar">
             <div class="titulo">
-                <h1>Los Santos Transit</h1>
+                <h1></h1>
                 <p></p>
             </div>
             <div class="linhas">
@@ -28,9 +112,6 @@
             </div>
             <nav>
                 <ul class="abas">
-                    <li><a href="#pagina-inicial">Página Inicial</a></li>
-                    <li><a href="#linhas">Linhas</a></li>
-                    <li><a href="#serviços">Aba de Serviços</a></li>
                 </ul>
             </nav>
         </div>
@@ -45,40 +126,56 @@
                 <h2 style="font-size: 36px; margin-bottom: 20px;">BEM-VINDO A LOS SANTOS TRANSIT</h2>
                 <p style="font-size: 24px;">A MAIOR EMPRESA DE TRANSPORTE PÚBLICO DE SAN ANDREAS</p>
                 <p>Somos a principal empresa de transporte urbano e regional de Los Santos. Há mais de duas décadas, fornecemos soluções confiáveis e sustentáveis de mobilidade para a comunidade. Nossos motoristas profissionais e frota moderna garantem que você chegue ao seu destino com eficiência e cortesia. Descubra nossos serviços de transporte público, entrega de mercadorias e muito mais. Seja parte da nossa jornada rumo a um transporte de qualidade em San Andreas.</p>
+                <br>
                 <div class="teste">
-                   <img src="testeai.png" alt="Imagem de Fundo" class="fundo">
-                <img src="ls.png" class=cidade>
-                <h2 style="font-size: 36px; margin-bottom: 20px;">Explorando as Abas</h2>
-                 <p class="espaco2" style="font-size: 25px;">No topo da página, você encontrará as abas "Início", "Linhas" e "Serviços". Cada aba tem uma finalidade específica:</p>
-                 <div class="texto-esquerdo">
-               <p class="espacamento" style="font-size: 15px;">* Início: Aqui, você encontrará informações gerais sobre a Los Santos Transit, incluindo nossa história e compromisso com a mobilidade na comunidade.</p>
-                 <p class="destacado2" style="font-size: 15px;">* Linhas: Navegue por nossas rotas de transporte público. Descubra horários, paradas e itinerários detalhados para planejar sua jornada.</p>
-                 <p class="espacamento2" style="font-size: 15px;">Serviços: Explore nossos serviços especiais, como entregas de mercadorias, aluguel de veículos e muito mais. Temos soluções personalizadas para atender às suas necessidades.</p>
-                 </div>
-                <p>
+                    <img src="testeai.png" alt="Imagem de Fundo" class="fundo">
+                    <img src="ls.png" class="cidade">
+                    <h2 style="font-size: 36px; margin-bottom: 20px;">Explorando as Abas</h2>
+                    <p class="espaco2" style="font-size: 19px;">No topo da página, você encontrará as abas "Início", "Linhas" e "Serviços". Cada aba tem uma finalidade específica:</p>
+                    <div class="texto-esquerdo">
+                        <p class="espacamento" style="font-size: 18px;">* Início: Aqui, você encontrará informações gerais sobre a Los Santos Transit, incluindo nossa história e compromisso com a mobilidade na comunidade.</p>
+                        <p class="destacado2" style="font-size: 18px;">* Linhas: Navegue por nossas rotas de transporte público. Descubra horários, paradas e itinerários detalhados para planejar sua jornada.</p>
+                        <p class="espacamento2" style="font-size: 18px;">Serviços: Explore nossos serviços especiais, como entregas de mercadorias, aluguel de veículos e muito mais. Temos soluções personalizadas para atender às suas necessidades.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    <!-- Resto da sua seção de apresentação da empresa aqui -->
+        <!-- Resto da sua seção de apresentação da empresa aqui -->
     </section>
 
-    <section id="linhas" style="display: none;"> 
-        <div class="linhas">
-            <h2 style="font-size: 36px; margin-bottom: 20px;">Aba Linhas</h2>
-            <div>
-            <div class="linha3">
-            <h2>LSTRANSIT 77 | Unity-Station/Pershing-Square</h2>
-            <img src="rotaleste.png" class="imagem-responsiva">
+    <section id="linha1" style="display: none;"> 
+        <div class="conteudo-linha">
+             <img src="MapaLeste.png" alt="Imagem" style="float: left; margin-right: 10px;">
+             <br>
+                <h2 style="font-size: 30px; margin-left: 10px;">Rota 77 - Unity Station > Willowfield > Playa Del Seville > East Beach > Los Flores > Jefferson > Ganton > Hospital General > Glen Park > Mulholland > Downtown LS > Pershing Square</h2>
+                </div>
+
+        <!-- Adicione mais conteúdo aqui, se necessário -->
+    </div>
         </div>
-        <div class="inforota">
-            <div>
     </section>
 
-    <section id="servicos" style="display: none;"> <!-- Esta seção está oculta por padrão -->
-        <!-- Conteúdo da página "Serviços" aqui -->
+    <section id="serviços" style="display: none;">
+        <div class="serviços">
+            <img src="layoutservice.png">
+
     </section>
 
     <script>
+        // Defina um array com as URLs das imagens que deseja usar
+        const imagens = ['samp1.png', 'samp2.png', 'logoresponsiva.png'];
+        let indiceAtual = 0;
+
+        // Função para alterar a imagem de fundo do cabeçalho
+        function trocarImagem() {
+            const header = document.querySelector('header');
+            header.style.backgroundImage = `url(${imagens[indiceAtual]})`;
+            indiceAtual = (indiceAtual + 1) % imagens.length;
+        }
+
+        // Chame a função trocarImagem a cada 5 segundos (5000 milissegundos)
+        setInterval(trocarImagem, 4000);
+
         // Função para mostrar a seção desejada ao clicar nas abas
         function mostrarSecao(secaoId) {
             const secoes = document.querySelectorAll('section');

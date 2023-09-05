@@ -13,12 +13,11 @@ body {
 
 /* Estilos para o cabeçalho */
 header {
-    background-image: url('fundo.png'); /* Imagem de fundo do cabeçalho */
-    background-size: cover;
-    background-position: center;
+    background-color: #000; /* Cor de fundo do cabeçalho */
     color: #fff; /* Cor do texto no cabeçalho */
     text-align: center;
     padding: 2rem 0; /* Espaçamento interno */
+    position: relative; /* Adiciona posição relativa para o cabeçalho */
 }
 
 .logo-empresa img {
@@ -217,11 +216,11 @@ h1 {
     }
 
      .destacado2 {
-        margin-top: 60px; /* Adicione o espaçamento superior desejado em pixels */
+        margin-top: 40px; /* Adicione o espaçamento superior desejado em pixels */
     }
 
       .destacado2 {
-        margin-top: 60px; /* Adicione o espaçamento superior desejado em pixels */
+        margin-top: 50px; /* Adicione o espaçamento superior desejado em pixels */
     }
 
 .linhas h2 {
@@ -232,15 +231,18 @@ h1 {
 
 .linha3 h2 {
     color: #87cefa; /* Cor de destaque laranja */
+    display: inline-block;
     text-align: left;
 }
 
 .inforota h2 {
+    display: inline-block;
     color: #87cefa; /* Cor de destaque laranja */
     text-align: right;
 }
 
 .linha3 {
+  display: inline-block;
   max-width: 100%;
   height: auto;
 }
@@ -252,3 +254,306 @@ h1 {
     display: block;
     margin: 0 auto;
 }
+
+/* Animação de troca de imagens no cabeçalho */
+/* Remova essas linhas */
+header {
+    background-size: 100% 100%; /* Faça a imagem cobrir todo o cabeçalho */
+    transition: background-image 2s ease-in-out; /* Aumente a duração da transição para 2 segundos */
+    /* Outras propriedades do cabeçalho */
+}
+
+/* Estilo para o contêiner branco no topo */
+.topo-branco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vh; /* Altura do espaço em branco no topo da página */
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 0 20px; /* Espaçamento interno para o conteúdo */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombreamento */
+}
+
+/* Estilo para a logo dentro do contêiner */
+.topo-branco .logo {
+    max-height: 100%; /* Garante que a logo não ultrapasse a altura do contêiner */
+}
+
+/* Estilo para as abas no lado direito */
+.abas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-shadow: none;
+}
+
+.abas li {
+    margin-right: 20px;
+}
+
+.abas a {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+/* Estilo para a aba ativa (pode ser personalizado conforme necessário) */
+.abas a.active {
+    background-color: #ff9900;
+    color: #fff;
+}
+
+/* Estilo para a aba "Linhas" */
+.abas .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para o link da aba "Linhas" */
+.abas .dropbtn {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: #000000
+    border-radius: 5px;
+    box-shadow: none /* Adiciona sombreamento */
+}
+
+/* Estilo para o conteúdo das subcategorias (inicialmente oculto) */
+.abas .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: none; /* Adiciona sombreamento */
+    z-index: 1;
+}
+
+/* Estilo para as subcategorias */
+.abas .dropdown-content a {
+    color: #000;
+    padding: 1px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Mostrar subcategorias ao passar o mouse sobre "Linhas" */
+.abas .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo para a subcategoria ativa (pode personalizar conforme necessário) */
+.abas .dropdown-content a:hover {
+    background-color: #4682B4 !important;;
+    color: #ffcc00 !important;
+    position: relative;
+}
+
+/* Estilo para a caixa de subcategorias "Linhas" */
+.subcategorias {
+    display: none; /* Inicialmente, oculte as subcategorias */
+    position: absolute;
+    top: 100%; /* Posicione abaixo da aba "Linhas" */
+    left: 0;
+    background-color: #333; /* Cor de fundo escura */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Adicione uma sombra suave */
+    min-width: 200px; /* Largura mínima da caixa */
+    z-index: 1; /* Certifique-se de que esteja na parte superior */
+}
+
+/* Estilo para as subcategorias dentro da caixa */
+.subcategorias a {
+    display: block;
+    color: #fff; /* Cor do texto branco */
+    text-decoration: none;
+    padding: 5px 0;
+    transition: background-color 0.3s; /* Transição suave de cor de fundo */
+}
+
+/* Estilo para as subcategorias no hover */
+.subcategorias a:hover {
+    background-color: #ff0000; /* Substitua #ff0000 pelo código de cor desejado */
+    color: #ffcc00 !important;
+}
+
+dropdown-content {
+   display: block;
+   text-decoration: none;
+   color: #E2144A;
+   background: #fff;
+   padding: 5px;
+   border: 1px solid #ccc;
+}
+
+.dropdown-content {
+    background-color: #ff0000;
+}
+
+/* Estilo para o texto no cabeçalho */
+.header-text {
+    position: absolute; /* Posiciona em relação ao cabeçalho */
+    top: 50%; /* Posiciona verticalmente no meio do cabeçalho */
+    left: 50%; /* Posiciona horizontalmente no meio do cabeçalho */
+    transform: translate(-50%, -50%); /* Centraliza o texto */
+    text-align: center; /* Centraliza o conteúdo do texto horizontalmente */
+    color: #fff; /* Cor do texto */
+}
+
+.header-text h1 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+}
+
+.header-text p {
+    font-size: 16px; /* Tamanho da fonte do parágrafo */
+}
+
+.icon-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1px; /* Espaço entre o ícone e o texto */
+}
+
+/* Estilo para o ícone */
+.icon-container img {
+    max-width: 30px; /* Largura máxima do ícone (ajuste conforme necessário) */
+    height: 10px; /* Altura automática mantendo a proporção */
+}
+
+.aba-servicos {
+    display: flex;
+    align-items: center;
+    margin-left: 0px; /* Espaçamento à esquerda do ícone */
+}
+
+.aba-servicos img {
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    margin-right: -50px; /* Espaçamento à direita do ícone */
+}
+
+/* Estilo para a seção de serviços */
+#serviços {
+    background-color: #222222; /* Cor de fundo branca */
+    color: #000000; /* Texto em preto */
+    padding: 20px; /* Espaçamento interno */
+}
+
+#serviços img {
+    max-width: 100%; /* Tornar a imagem responsiva */
+    height: auto;
+}
+
+        /* Estilo para tornar o texto responsivo */
+#serviços p {
+    font-size: 18px; /* Tamanho da fonte base */
+}
+
+        /* Media query para telas menores */
+@media screen and (max-width: 768px) {
+    #serviços {
+        padding: 10px; /* Reduzir o espaçamento interno */
+}
+
+#serviços p {
+    font-size: 16px; /* Reduzir o tamanho da fonte */
+    }
+}
+
+/* Estilo para o menu suspenso (dropdown) */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para o botão da aba "Linhas" */
+.dropbtn {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Estilo para o conteúdo do menu suspenso */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+/* Estilo para os itens do menu suspenso (as subcategorias) */
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Mostrar o conteúdo do menu suspenso quando o mouse passa sobre o botão "Linhas" */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+h2{
+    color: darkred;
+}
+
+  #linha1 { 
+            background-color: #000000; /* Cor de fundo branca */
+            color: #000; /* Texto em preto */
+            padding: 20px; /* Espaçamento interno */
+        }
+
+        #linha1 img {
+            max-width: 100%; /* Tornar a imagem responsiva */
+            height: 500px;
+        }
+
+        /* Estilo para tornar o texto responsivo */
+        #linha1 p {
+            font-size: 18px; /* Tamanho da fonte base */
+        }
+
+        /* Media query para telas menores */
+        @media screen and (max-width: 768px) {
+            #linha1 {
+                padding: 10px; /* Reduzir o espaçamento interno */
+            }
+
+            #linha1 p {
+                font-size: 16px; /* Reduzir o tamanho da fonte */
+            }
+        }
+
+body {
+  font-size: 16px; /* Define um tamanho de fonte padrão para o corpo do texto */
+}
+
+h2 {
+  font-size: 2em; /* Aumenta o tamanho da fonte do cabeçalho em relação ao tamanho do corpo do texto */
+}
+
+p {
+  font-size: 1em; /* Tamanho de fonte padrão para parágrafos */
+}
+
+/* Media query para ajustar o tamanho da fonte em telas menores */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+}
+
