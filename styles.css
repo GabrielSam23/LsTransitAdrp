@@ -164,6 +164,7 @@ img.alterar {
 }
 
 img.cidade {
+    background-attachment: ;
     float: right;
     width: 600px;
     height: auto;
@@ -222,12 +223,6 @@ h1 {
       .destacado2 {
         margin-top: 50px; /* Adicione o espaçamento superior desejado em pixels */
     }
-
-.linhas h2 {
-    font-size: 1.5rem; /* Reduza um pouco o tamanho da fonte para o cabeçalho */
-    color: #ff5500; /* Cor de destaque laranja */
-    text-align: center;
-}
 
 .linha3 h2 {
     color: #87cefa; /* Cor de destaque laranja */
@@ -557,3 +552,60 @@ p {
   }
 }
 
+.linha6 {
+    flex: 1;
+  float: left; /* Para posicionar a imagem à esquerda */
+  margin-right: 100px; /* Espaço entre as imagens (ajuste conforme necessário) */
+
+}
+
+.linha7 {
+    flex: 1;
+  float: left; /* Para posicionar a imagem à esquerda */
+  margin-right: 100px; /* Espaço entre as imagens (ajuste conforme necessário) */
+  margin-left: 150px;
+}
+
+.linhas {
+    float: right;
+    margin-left: 50px; /* Adicione o espaço desejado à esquerda */
+    margin-right: 50px; /* Adicione o espaço desejado à direita */
+}
+
+/* Estilize o contêiner pai */
+.container2 {
+    display: flex;
+    justify-content: space-between; /* Distribuir as imagens igualmente na linha */
+    align-items: center; /* Centralizar verticalmente as imagens */
+    width: 100%; /* Garante que o contêiner ocupe a largura total da página */
+}
+
+/* Estilize as imagens */
+.imagem {
+    flex: 1; /* Faz com que cada imagem ocupe a mesma quantidade de espaço na linha */
+    text-align: center; /* Centralizar o conteúdo dentro das divs das imagens */
+}
+
+/* Estilize as imagens para garantir que não excedam uma largura máxima */
+.imagem img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+}
+
+.container2 {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.container2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.container2 {
+    width: 100%; /* A imagem ocupará toda a largura do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: none; /* Remove qualquer limite de largura máximo */
+}

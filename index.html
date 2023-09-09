@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="sua_logo.png" type="image/png">
+    <link rel="icon" href="fiveicon.png" type="image/png">
     <title>Los Santos Transit</title>
     <style>
         body {
@@ -75,25 +75,20 @@
 </head>
 <body>
     <div class="topo-branco">
-        <img src="sua_logo.png" class="logo">
+        <img src="fiveicon.png" class="logo">
         <ul class="abas">
             <li class="icone-pagina-inicial">
-                <img src="inicial.png" alt="Ícone Página Inicial">
-                <a href="#pagina-inicial">Página Inicial</a>
+                <img src="logo1.png" alt="Ícone Página Inicial">
+                <a href="#pagina-inicial" class="minha-classe">Página Inicial</a>
             </li>
             <li class="icone-servicos">
-                    <img src="linhalogo.png">
+                    <img src="logo2.png">
                     <div>
             <li class="dropdown"> <!-- Adiciona uma classe "dropdown" para criar o efeito de subcategorias -->
-                <a href="javascript:void(0)" class="dropbtn">Linhas </a>
-                <div class="dropdown-content"> <!-- Conteúdo das subcategorias -->
-                    <a href="#linha1">Line 77</a>
-                    <a href="#linha2">Line 88</a>
-                    <a href="#linha3">Line 102</a>
-                    <div>
+                <a href="#linhas">Linhas</a>
                         <li class="aba-servicos">
-                            <img src="logoservicos.png">
-                    <li><a href="#serviços">Aba de Serviços</a></li>
+                            <img src="logo3.png">
+                    <li><a href="#serviços">Serviços</a></li>
                 </div>
             </li>
         </ul>
@@ -129,9 +124,11 @@
                 <br>
                 <div class="teste">
                     <img src="testeai.png" alt="Imagem de Fundo" class="fundo">
+                    <br>
                     <img src="ls.png" class="cidade">
                     <h2 style="font-size: 36px; margin-bottom: 20px;">Explorando as Abas</h2>
                     <p class="espaco2" style="font-size: 19px;">No topo da página, você encontrará as abas "Início", "Linhas" e "Serviços". Cada aba tem uma finalidade específica:</p>
+                    <br>
                     <div class="texto-esquerdo">
                         <p class="espacamento" style="font-size: 18px;">* Início: Aqui, você encontrará informações gerais sobre a Los Santos Transit, incluindo nossa história e compromisso com a mobilidade na comunidade.</p>
                         <p class="destacado2" style="font-size: 18px;">* Linhas: Navegue por nossas rotas de transporte público. Descubra horários, paradas e itinerários detalhados para planejar sua jornada.</p>
@@ -144,16 +141,21 @@
         <!-- Resto da sua seção de apresentação da empresa aqui -->
     </section>
 
-    <section id="linha1" style="display: none;"> 
-        <div class="conteudo-linha">
-             <img src="MapaLeste.png" alt="Imagem" style="float: left; margin-right: 10px;">
-             <br>
-                <h2 style="font-size: 30px; margin-left: 10px;">Rota 77 - Unity Station > Willowfield > Playa Del Seville > East Beach > Los Flores > Jefferson > Ganton > Hospital General > Glen Park > Mulholland > Downtown LS > Pershing Square</h2>
-                </div>
-
-        <!-- Adicione mais conteúdo aqui, se necessário -->
+    <section id="linhas" style="display: none;">
+      <div class="container2">
+        <a href="linha-77.html" class="imagem esquerda">
+            <br>
+            <img src="lstransit.png" alt="Imagem à esquerda">
+        </a>
+        <a href="link_para_imagem_centro.html" class="imagem centro">
+            <br>
+            <img src="lstransit2.png" alt="Imagem central">
+        </a>
+        <a href="link_para_imagem_direita.html" class="imagem direita">
+            <br>
+            <img src="linha4.png" alt="Imagem à direita">
+        </a>
     </div>
-        </div>
     </section>
 
     <section id="serviços" style="display: none;">
@@ -163,19 +165,31 @@
     </section>
 
     <script>
-        // Defina um array com as URLs das imagens que deseja usar
-        const imagens = ['samp1.png', 'samp2.png', 'logoresponsiva.png'];
-        let indiceAtual = 0;
+   // Defina um array com as URLs das imagens que deseja usar
+// Defina um array com as URLs das imagens que deseja usar
+const imagens = ['samp1.png', 'samp2.png', 'logoresponsiva.png', 'onibus5.png'];
+let indiceAtual = 0;
 
-        // Função para alterar a imagem de fundo do cabeçalho
-        function trocarImagem() {
-            const header = document.querySelector('header');
-            header.style.backgroundImage = `url(${imagens[indiceAtual]})`;
-            indiceAtual = (indiceAtual + 1) % imagens.length;
-        }
+// Função para alterar a imagem de fundo do cabeçalho
+function trocarImagem() {
+    const header = document.querySelector('header');
+    header.style.backgroundImage = `url(${imagens[indiceAtual]})`;
+    indiceAtual = (indiceAtual + 1) % imagens.length;
+}
 
-        // Chame a função trocarImagem a cada 5 segundos (5000 milissegundos)
-        setInterval(trocarImagem, 4000);
+// Chame a função trocarImagem a cada 5 segundos (5000 milissegundos)
+setInterval(trocarImagem, 4000);
+
+// Função para tornar a imagem de fundo responsiva e centralizada
+function tornarImagemDeFundoResponsiva() {
+    const header = document.querySelector('header');
+    header.style.backgroundSize = 'cover'; // Cobrir o elemento com a imagem
+    header.style.backgroundRepeat = 'no-repeat';
+    header.style.backgroundPosition = 'center center'; // Centralizar a imagem de fundo
+}
+
+// Chame a função para tornar a imagem de fundo responsiva quando a página carregar
+window.addEventListener('load', tornarImagemDeFundoResponsiva);
 
         // Função para mostrar a seção desejada ao clicar nas abas
         function mostrarSecao(secaoId) {
@@ -198,6 +212,15 @@
                 mostrarSecao(secaoId);
             });
         });
+
+        const button = document.querySelector('dropbtn');
+
+const disableButton = () => {
+    button.disabled = true;
+};
+
+button.addEventListener('click', disableButton);
+
     </script>
 </body>
 </html>
