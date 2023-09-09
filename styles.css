@@ -164,7 +164,7 @@ img.alterar {
 }
 
 img.cidade {
-    background-attachment: ;
+    background-attachment: fixed;
     float: right;
     width: 600px;
     height: auto;
@@ -608,4 +608,19 @@ p {
     width: 100%; /* A imagem ocupará toda a largura do contêiner pai */
     height: auto; /* Mantém a proporção da imagem */
     max-width: none; /* Remove qualquer limite de largura máximo */
+}
+
+.imagemdireita{
+    max-width: 100%;
+    height: auto;
+}
+
+.imagemcentro {
+    max-width: 100%;
+    height: auto;
+}
+
+.imagemesquerda {
+    max-width: 100%;
+    height: auto;
 }
