@@ -606,7 +606,7 @@ p {
 }
 
 .container2 {
-    width: 100%; /* A imagem ocupará toda a largura do contêiner pai */
+    width: 50%; /* A imagem ocupará toda a largura do contêiner pai */
     height: auto; /* Mantém a proporção da imagem */
     max-width: none; /* Remove qualquer limite de largura máximo */
 }
@@ -614,6 +614,7 @@ p {
 .imagemdireita{
     max-width: 100%;
     height: auto;
+    width: 3000px;
 }
 
 .imagemcentro {
@@ -675,4 +676,13 @@ p {
 h3 {
     color: #add8e6;
     margin-top: 20px; /* Ajuste o valor conforme necessário */
+}
+
+@media screen and (max-width: 768px) {
+  /* Defina as imagens para ficarem uma em cima da outra */
+  .container2{
+    display: block; /* Certifique-se de que as imagens sejam exibidas em bloco */
+    margin-bottom: 10px; /* Adicione um espaço entre as imagens, se desejar */
+    width: 390px;
+  }
 }
