@@ -14,7 +14,7 @@ body {
 /* Estilos para o cabeçalho */
 header {
     background-color: #000; /* Cor de fundo do cabeçalho */
-    color: #fff; /* Cor do texto no cabeçalho */
+    color: black; /* Cor do texto no cabeçalho */
     text-align: center;
     padding: 2rem 0; /* Espaçamento interno */
     position: relative; /* Adiciona posição relativa para o cabeçalho */
@@ -291,7 +291,7 @@ header {
 .abas a {
     text-decoration: none;
     padding: 5px 10px;
-    background-color: #fff;
+    background-color: #b82929;
     color: #000;
     border-radius: 5px;
     box-shadow: none;
@@ -322,7 +322,7 @@ header {
 .abas .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #f42828;
     min-width: 160px;
     box-shadow: none; /* Adiciona sombreamento */
     z-index: 1;
@@ -478,7 +478,7 @@ dropdown-content {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #f42828;
     min-width: 160px;
     border: 1px solid #ccc;
     z-index: 1;
@@ -686,4 +686,3 @@ h3 {
     width: 390px;
   }
 }
-
