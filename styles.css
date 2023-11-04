@@ -365,7 +365,7 @@ header {
 /* Estilo para as subcategorias dentro da caixa */
 .subcategorias a {
     display: block;
-    color: #fff; /* Cor do texto branco */
+    color: #808080; /* Cor do texto branco */
     text-decoration: none;
     padding: 5px 0;
     transition: background-color 0.3s; /* Transição suave de cor de fundo */
@@ -373,21 +373,21 @@ header {
 
 /* Estilo para as subcategorias no hover */
 .subcategorias a:hover {
-    background-color: #ff0000; /* Substitua #ff0000 pelo código de cor desejado */
+    background-color: #808080; /* Substitua #ff0000 pelo código de cor desejado */
     color: #ffcc00 !important;
 }
 
 dropdown-content {
    display: block;
    text-decoration: none;
-   color: #E2144A;
-   background: #fff;
+   color: #808080;
+   background: #808080;
    padding: 5px;
    border: 1px solid #ccc;
 }
 
 .dropdown-content {
-    background-color: #ff0000;
+    background-color: #808080;
 }
 
 /* Estilo para o texto no cabeçalho */
@@ -686,3 +686,4 @@ h3 {
     width: 390px;
   }
 }
+

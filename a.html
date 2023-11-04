@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Los Santos Transit</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #00000;
+        }
+        .panel {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #343a40;
+        }
+        .button {
+            background-color: #FFFFFF;
+            color: black;
+            padding: 10px 115px;
+            text-align: center;
+            display: inline-block;
+            font-size: 15px;
+            margin: 50px 2px;
+            cursor: pointer;
+            margin-top: 150px;
+        }
+        .list {
+            margin-left: 20px;
+        }
+        ul li {
+            border: 2px solid #FFFFFF;
+            margin-bottom: 3px;
+            padding: 5px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            color: #fcca71;
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: -70px;
+        }
+        p {
+            color: white;
+            font-size: 15px;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: -10px;
+        }
+
+        h5{
+            color: #ffcd72;
+            font-size: 45px;
+            margin-bottom: -50px;
+        }
+
+        ul li img {
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .message {
+            color: white;
+            font-size: 15px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: -150px;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <div>
+            <h1>Você está na</h1>
+            <h5> LSTRANSIT!<h5>
+            <p>Acompanhe o transporte público<br>em tempo real.</p>
+            <button class="button">IR PARA O PAINEL</button>
+        </div>
+         <img class="overlay" id="mapOverlay" src="" alt="Imagem" />
+        <div class="list">
+            <h2>Linhas operantes e não operantes:</h2>
+            <ul>
+                <li>001 - Downtown/Market <br style="margin-top: 10px;"> Verona Mall, Market <img src="mapa.png" style="margin-right: -120px;"><img class="map-icon" src="busverde.png" style="margin-right: -5px;"></li>
+                <li>030 - Downtown/Idlewood  <br style="margin-top: 10px;"> Star Street, Temple <img src="mapa.png" style="margin-right: -99px;"><img class="map-icon" src="busverde.png" style="margin-right: -5px;"></li>
+                <li>004 - Idlewood/Temple  <br style="margin-top: 10px;"> Fora de operação<img src="mapa.png" style="margin-right: -126px;"><img class="map-icon" src="busvermelho.png" style="margin-right: -5px;"></li>
+                <li>005 - Airport/Las Colinas  <br style="margin-top: 10px;"> Fora de operação<img src="mapa.png" style="margin-right: -120px;"><img class="map-icon" src="busvermelho.png" style="margin-right: -5px;"></li>
+                <li>006 - Downtown/Temple  <br style="margin-top: 10px;"> Fora de operação<img src="mapa.png" style="margin-right: -115px;"><img class="map-icon" src="busvermelho.png" style="margin-right: -5px;"></li>
+                <li>007 - Airport/Glen Park <br style="margin-top: 10px;"> Fora de operação<img src="mapa.png" style="margin-right: -135px;"><img class="map-icon" src="busvermelho.png" style="margin-right: -5px;"></li>
+            </ul>
+        </div>
+        <div class="message">Clique no ícone do mapa na linha desejada e<div>carregará a imagem da trajetória de <div> seu transporte.</div>
+    </div>
+
+    <!-- JavaScript para exibir a imagem em uma janela de sobreposição -->
+    <img class="overlay" id="mapOverlay" src="" alt="Imagem" />
+
+    <script>
+        // Mapeie as imagens para cada linha
+        const lineImages = {
+            "001": "linha4.png",
+            "030": "linha700.png",
+            "004": "imagem_linha_004.png",
+            "005": "imagem_linha_005.png",
+            "006": "imagem_linha_006.png",
+            "007": "imagem_linha_007.png"
+        };
+
+        // Função para mostrar a imagem no meio da tela
+        function showMapOverlay(line) {
+            const overlay = document.getElementById("mapOverlay");
+            overlay.src = lineImages[line];
+            overlay.style.display = "block";
+            overlay.style.width = "200px";
+            overlay.style.height = "";
+            overlay.style.top = "55%";
+        }
+
+        // Função para fechar a imagem quando clicar fora dela
+        function closeMapOverlay(event) {
+            if (event.target.id === "mapOverlay") {
+                const overlay = document.getElementById("mapOverlay");
+                overlay.style.display = "none";
+            }
+        }
+
+        // Adicione eventos de clique aos ícones do mapa
+        const mapIcons = document.querySelectorAll("li img[src='mapa.png']");
+        mapIcons.forEach((mapIcon, index) => {
+            mapIcon.addEventListener("click", () => {
+                const line = mapIcon.parentElement.innerText.split("-")[0].trim();
+                showMapOverlay(line);
+            });
+        });
+
+        // Adicione um evento de clique ao fundo escuro para fechar a imagem
+        const overlay = document.getElementById("mapOverlay");
+        overlay.addEventListener("click", closeMapOverlay);
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="fiveicon.png" type="image/png">
+    <title>Los Santos Transit</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #222; /* Cor de fundo cinza escuro */
+            color: #000000; /* Texto em preto */
+        }
+
+        /* Estilo para o contêiner branco no topo */
+        .topo-branco {
+            height: 5vh; /* Altura do espaço em branco no topo da página */
+            background-color:whiteh; /* Cor de fundo branca */
+        }
+
+        .cabecalho-grande {
+            height: 50vh; /* Define a altura do cabeçalho como metade da altura da viewport */
+            position: relative; /* Permite posicionar os elementos filhos de forma absoluta */
+        }
+
+        .cabecalho-grande::before {
+            content: ""; /* Cria um pseudo-elemento antes do conteúdo do cabeçalho */
+            position: absolute; /* Posiciona o pseudo-elemento de forma absoluta */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo do cabeçalho */
+            animation: imagens-passando 50s initial; /* Define a animação das imagens passando no fundo */
+            background-image: url('fundo.png'), url('rotaaero.png'), url('ls.png'); /* Adicione as URLs das imagens desejadas */
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.2);
+        }
+
+        @keyframes imagens-passando {
+            0% {
+                background-position: 0 0; /* Inicia a animação com as imagens na posição inicial */
+            }
+            100% {
+                background-position: 100% 0; /* Termina a animação com as imagens na posição final */
+            }
+        }
+        
+        .icone-pagina-inicial {
+            display: flex;
+            align-items: center;
+            margin-left: 15px; /* Espaçamento à esquerda do ícone */
+        }
+
+        .icone-pagina-inicial img {
+            width: 20px; /* Largura do ícone */
+            height: 20px; /* Altura do ícone */
+            margin-right: 2px; /* Espaçamento à direita do ícone */
+        }
+
+        .icone-servicos {
+            display: flex;
+            align-items: center;
+            margin-left: 0px; /* Espaçamento à esquerda do ícone */
+        }
+
+        .icone-servicos img {
+            width: 20px; /* Largura do ícone */
+            height: 20px; /* Altura do ícone */
+            margin-right: -20px; /* Espaçamento à direita do ícone */
+        }
+    </style>
+</head>
+<body>
+    <div class="topo-branco">
+        <img src="fiveicon.png" class="logo">
+        <ul class="abas">
+            <li class="icone-pagina-inicial">
+                <img src="logo1.png" alt="Ícone Página Inicial">
+                <a href="#pagina-inicial" class="minha-classe">Página Inicial</a>
+            </li>
+            <li class="icone-servicos">
+                    <img src="logo2.png">
+                    <div>
+            <li class="dropdown"> <!-- Adiciona uma classe "dropdown" para criar o efeito de subcategorias -->
+                <a href="#linhas">Linhas</a>
+                        <li class="aba-servicos">
+                            <img src="logo3.png">
+                    <li><a href="#serviços">Serviços</a></li>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <header>
+        <div class="cabecalho cabecalho-grande">
+           <iframe src="a.html" width="1750px" height="600px" frameborder="0" scrolling="no"></iframe>
+            <img src="" class="alterar">
+            <div class="titulo">
+                <h1></h1>
+                <p></p>
+            </div>
+            <div class="linhas">
+                <p></p>
+                <p></p>
+            </div>
+            <nav>
+                <ul class="abas">
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="pagina-inicial">
+        <div class="bloco-roxo">
+            <div class="logo-empresa">
+                <img src="" alt="">
+            </div>
+            <div class="mensagem">
+                <h2 style="font-size: 36px; margin-bottom: 20px;">BEM-VINDO A LOS SANTOS TRANSIT</h2>
+                <p style="font-size: 24px;">A MAIOR EMPRESA DE TRANSPORTE PÚBLICO DE SAN ANDREAS</p>
+                <p>Somos a principal empresa de transporte urbano e regional de Los Santos. Há mais de duas décadas, fornecemos soluções confiáveis e sustentáveis de mobilidade para a comunidade. Nossos motoristas profissionais e frota moderna garantem que você chegue ao seu destino com eficiência e cortesia. Descubra nossos serviços de transporte público, entrega de mercadorias e muito mais. Seja parte da nossa jornada rumo a um transporte de qualidade em San Andreas.</p>
+                <br>
+                <div class="teste">
+                    <br>
+                    <img src="ls.png" class="cidade">
+                    <h2 style="font-size: 36px; margin-bottom: 20px;">Explorando as Abas</h2>
+                    <p class="espaco2" style="font-size: 19px;">No topo da página, você encontrará as abas "Início", "Linhas" e "Serviços". Cada aba tem uma finalidade específica:</p>
+                    <br>
+                    <div class="texto-esquerdo">
+                        <p class="espacamento" style="font-size: 18px;">* Início: Aqui, você encontrará informações gerais sobre a Los Santos Transit, incluindo nossa história e compromisso com a mobilidade na comunidade.</p>
+                        <p class="destacado2" style="font-size: 18px;">* Linhas: Navegue por nossas rotas de transporte público. Descubra horários, paradas e itinerários detalhados para planejar sua jornada.</p>
+                        <p class="espacamento2" style="font-size: 18px;">Serviços: Explore nossos serviços especiais, como entregas de mercadorias, aluguel de veículos e muito mais. Temos soluções personalizadas para atender às suas necessidades.</p>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                <h4>Made by GabrielSam With ❤️<h4>
+                </div>
+            </div>
+        </div>
+        <!-- Resto da sua seção de apresentação da empresa aqui -->
+    </section>
+
+    <section id="linhas" style="display: none;">
+      <div class="container2">
+        <a href="linha-77.html" class="imagemesquerda">
+            <br>
+            <img src="lstransit1v2.png" alt="Imagem à esquerda">
+        </a>
+        <a href="linha-747.html" class="imagemcentro">
+            <br>
+            <img src="lstransit2.png" alt="Imagem central">
+        </a>
+        <a href="linha-4.html" class="imagemdireita">
+            <br>
+            <img src="linha4.png" alt="Imagem à direita">
+        </a>
+    </div>
+    </section>
+
+    <section id="serviços" style="display: none;">
+        <div class="serviços">
+            <img src="layoutservice.png">
+
+    </section>
+
+    <script>
+   // Defina um array com as URLs das imagens que deseja usar
+// Defina um array com as URLs das imagens que deseja usar
+const imagens = ['rian1.png', 'rian2.png', 'rian4.png', 'rian3.png'];
+let indiceAtual = 0;
+
+// Função para alterar a imagem de fundo do cabeçalho
+function trocarImagem() {
+    const header = document.querySelector('header');
+    header.style.backgroundImage = `url(${imagens[indiceAtual]})`;
+    indiceAtual = (indiceAtual + 1) % imagens.length;
+}
+
+// Chame a função trocarImagem a cada 5 segundos (5000 milissegundos)
+setInterval(trocarImagem, 5000);
+    
+// Função para tornar a imagem de fundo responsiva e centralizada
+function tornarImagemDeFundoResponsiva() {
+    const header = document.querySelector('header');
+    header.style.backgroundSize = 'cover'; // Cobrir o elemento com a imagem
+    header.style.backgroundRepeat = 'no-repeat';
+    header.style.backgroundPosition = 'center center'; // Centralizar a imagem de fundo
+}
+
+// Chame a função para tornar a imagem de fundo responsiva quando a página carregar
+window.addEventListener('load', tornarImagemDeFundoResponsiva);
+
+        // Função para mostrar a seção desejada ao clicar nas abas
+        function mostrarSecao(secaoId) {
+            const secoes = document.querySelectorAll('section');
+            secoes.forEach(secao => {
+                if (secao.id === secaoId) {
+                    secao.style.display = 'block';
+                } else {
+                    secao.style.display = 'none';
+                }
+            });
+        }
+
+        // Adicione um evento de clique às abas para mostrar as seções correspondentes
+        const abas = document.querySelectorAll('.abas a');
+        abas.forEach(aba => {
+            aba.addEventListener('click', (event) => {
+                event.preventDefault();
+                const secaoId = event.target.getAttribute('href').substring(1);
+                mostrarSecao(secaoId);
+            });
+        });
+
+        const button = document.querySelector('dropbtn');
+
+const disableButton = () => {
+    button.disabled = true;
+};
+
+button.addEventListener('click', disableButton);
+
+    </script>
+</body>
+</html>
