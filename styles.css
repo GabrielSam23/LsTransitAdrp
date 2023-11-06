@@ -680,8 +680,8 @@ h3 {
 
 @media screen and (max-width: 768px) {
   /* Defina as imagens para ficarem uma em cima da outra */
-  .container2{
-    display: block; /* Certifique-se de que as imagens sejam exibidas em bloco */
+  .cabecalho-grande {
+    display: flex; /* Certifique-se de que as imagens sejam exibidas em bloco */
     margin-bottom: 10px; /* Adicione um espaço entre as imagens, se desejar */
     width: 390px;
   }

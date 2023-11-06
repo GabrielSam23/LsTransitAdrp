@@ -12,18 +12,16 @@
     <title>Los Santos Transit</title>
     <style>
         body {
-            margin: 0;
+             margin: 0;
             padding: 0;
-            background-color: #c9c6c6
-; /* Cor de fundo cinza escuro */
+            background-color: #c9c6c6; /* Cor de fundo cinza escuro */
             color: #000000; /* Texto em preto */
         }
 
         /* Estilo para o contêiner branco no topo */
         .topo-branco {
             height: 5vh; /* Altura do espaço em branco no topo da página */
-            background-color: #b82929
-; /* Cor de fundo branca */
+            background-color: #b82929; /* Cor de fundo branca */
         }
 
         .cabecalho-grande {
@@ -76,16 +74,104 @@
         .icone-servicos img {
             width: 20px; /* Largura do ícone */
             height: 20px; /* Altura do ícone */
-            margin-right: -20px; /* Espaçamento à direita do ícone */
+            margin-right: 0px; /* Espaçamento à direita do ícone */
         }
+
+        /* Estilo para a barra */
+        
+        /* Estilo para as categorias */
+        .categoria {
+            text-decoration: none; /* Remove a formatação de link padrão */
+            color: black; /* Cor do texto principal */
+            font-weight: bold; /* Deixa o texto em negrito */
+            font-size: 30px; /* Tamanho da fonte */
+            transition: color 0.3s; /* Transição suave da cor ao passar o mouse */
+            margin-bottom: 0px;
+        }
+
+        .categoria:hover {
+            color: #ff5500; /* Cor de destaque laranja no hover */
+        }
+  
+        .imageservice {
+            display: flex;
+            justify-content: flex-end; /* Alterado para flex-end */
+            position: relative;
+            height: 100px;
+            width: 5%;
+            margin-right: 0; /* Alterado para margin-right */
+            margin-bottom:  35px;
+        }
+
+
+        .imageservice2 {
+            position: relative;
+            height: 100px;
+            margin-right: 1px;
+            margin-bottom: 50px;
+        }
+
+        .imageservice3 {
+            position: relative;
+            margin-right: 0px;
+            margin-bottom: 5px;
+            width: 100px;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* Proporção de aspecto 16:9 (altere conforme necessário) */
+}
+
+.cabe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+    @media screen and (max-width:1020px){
+        .flex{
+            flex-direction: column-reverse;
+        }
+    }
+
+    @media screen and (max-width:1020px){
+       .topo-branco
+         .flex{
+            flex-direction: column-reverse;
+        }
+            
+            @media screen and (max-width:1020px){
+       .painel2
+         .flex{
+            flex-direction: column-reverse;
+        }
+            
+        iframe{
+            max-width: 100%;
+            height: 500px;
+            width: 300px;
+            aspect-ratio: 2/3;
+        }
+    </style>
     </style>
 </head>
 <body>
+    <body>
+    </body>
+</body>
+</html>
     <div class="topo-branco">
-        <img src="fiveicon.png" class="logo">
+        <img src="nova.png" class="logo">
         <ul class="abas">
             <li class="icone-pagina-inicial">
-                <img src="logo1.png" alt="Ícone Página Inicial">
+                <img src="vermelha.png" alt="Ícone Página Inicial">
                 <a href="#pagina-inicial" class="minha-classe">Página Inicial</a>
             </li>
             <li class="icone-servicos">
@@ -98,9 +184,9 @@
     </div>
 
     <header>
-        <div class="cabecalho cabecalho-grande">
+        <div class="painel">
            <iframe src="a.html" width="1750px" height="600px" frameborder="0" scrolling="no"></iframe>
-            <img src="" class="alterar">
+            <img src="" class="alterar">=
             <div class="titulo">
                 <h1></h1>
                 <p></p>
