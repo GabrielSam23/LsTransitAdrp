@@ -50,7 +50,7 @@
             height: auto;
         }
         ul li {
-            border: 2px solid #FFFFFF;
+            border: 3px solid #FFFFFF;
             margin-bottom: 5px;
             padding: 5px;
             background-color: white;
@@ -148,13 +148,42 @@
             font-size: 15px;
             cursor: pointer;
         }
-        .list {
-            margin-left: -100px;
-        }
+        @media only screen and (min-width: 768px) {
+              .map-icon1 {
+    margin-left: 300px;
+  }
+  .map-icon2 {
+    margin-left: 275px;
+  }
+  .map-icon5 {
+    margin-left: 298px;
+  }
+  .map-icon3 {
+    margin-left: 303px;
+  }
+  .map-icon4 {
+    margin-left: 266px;
+  }
+}
         
-        .map-icon {
-            margin-right: 21px;
+
+        @media only screen and (max-width: 767px) {
+        .map-icon1 {
+            margin-left: 200px;
         }
+        .map-icon2 {
+            margin-left: 175px;
+        }
+        .map-icon5 {
+            margin-left: 197px;
+        }
+        .map-icon3 {
+            margin-left: 202px;
+        }
+        .map-icon4 {
+            margin-left: 165px;
+        }
+}
 
     </style>
 </head>
@@ -172,11 +201,11 @@
         <div class="list">
             <h3>Linhas operantes e não operantes:</h3>
             <ul>
-                <li onclick="showMapOverlay('036')">036 - Downtown / Market <br style="margin-top: 10px;"> Verona Mall, Market <img src="" style="margin-right: -120px;"><img class="map-icon" src="verde.png" style="margin-right: -5px;"></li>
-                <li onclick="showMapOverlay('035')">035 - Unity Station/Rodeo  <br style="margin-top: 10px;"> Star Street, Temple <img src="" style="margin-right: -99px;"><img class="map-icon" src="verde.png" style="margin-right: -5px;"></li>
-                <li onclick="showMapOverlay('022')">022 - Unity Station/Market <br style="margin-top: 10px;"> Fora de operação<img src="" style="margin-right: -126px;"><img class="map-icon" src="vermelho.png" style="margin-right: -5px;"></li>
-                <li onclick="showMapOverlay('077')">077 - LS Airport/Jefferson  <br style="margin-top: 10px;"> Fora de operação<img src="" style="margin-right: -120px;"><img class="map-icon" src="vermelho.png" style="margin-right: -5px;"></li>
-                <li onclick="showMapOverlay('050')">050- LS Airport/Montgomery  <br style="margin-top: 20px;"> Fora de operação<img src="" style="margin-right: -115px;"><img class="map-icon" src="vermelho.png" style="margin-right: -5px;"></li>
+                <li onclick="showMapOverlay('036')">036 - Downtown / Market <br style="margin-top: 10px;"> Verona Mall, Market <img src="" style="margin-right: -120px;"><img class="map-icon1" src="verde1.png" style="margin-right: 0px;"></li>
+                <li onclick="showMapOverlay('035')">035 - Unity Station/Rodeo  <br style="margin-top: 20px;"> Star Street, Temple <img src="" style="margin-right: -99px;"><img class="map-icon2" src="vermelho.png" style="margin-right: -5px;"></li>
+                <li onclick="showMapOverlay('022')">022 - Unity Station/Market <br style="margin-top: 10px;"> Fora de operação<img src="" style="margin-right: -126px;"><img class="map-icon5" src="verde1.png" style="margin-right: -5px;"></li>
+                <li onclick="showMapOverlay('077')">077 - LS Airport/Jefferson  <br style="margin-top: 10px;"> Fora de operação<img src="" style="margin-right: -120px;"><img class="map-icon3" src="vermelho.png" style="margin-right: -5px;"></li>
+                <li onclick="showMapOverlay('050')">050- LS Airport/Montgomery  <br style="margin-top: 20px;"> Fora de operação<img src="" style="margin-right: -115px;"><img class="map-icon4" src="verde1.png" style="margin-right: -5px;"></li>
             </ul>
         </div>
     </div>
