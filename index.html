@@ -20,10 +20,9 @@
 
         /* Estilo para o contêiner branco no topo */
         .topo-branco {
-            height: 5vh; /* Altura do espaço em branco no topo da página */
-            width: auto;
+            height: auto; /* Altura do espaço em branco no topo da página */
             background-color: #b82929; /* Cor de fundo branca */
-            size: px;
+
         }
 
         .cabecalho-grande {
@@ -156,6 +155,13 @@
   .painel2 .flex{
     flex-direction: row;
   }
+  .zezo1 img {
+    height: 600px;
+    margin-bottom: 550px;
+    width: 9500px;
+    float: left;
+    margin-left: -2500px;
+  }
 }
 
             
@@ -170,9 +176,10 @@
             position: relative;
   display: flex;
   justify-content: space-around;
-  padding: 20px;
+  padding: 10px;
   background-color: indianred; /* cor de fundo amarela */
   margin-bottom: -100px;
+
 }
 .icon-text {
   flex-grow: 1;
@@ -206,14 +213,43 @@
         position: absolute;
         bottom: -189%;
         left: 0;
-        width: 100%;
-        filter: brightness(0.5); 
+        width: 95%;
     }
+
+    topo-branco,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.zezo1 {
+  width: 7500px;
+  height: 350px;
+  background-image: url("v3.png");
+  background-position: center;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 800px;
+}
+
+.zezo1::before {
+  content: " 
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+
 </style>
     </style>
 </head>
-<body>
-    <body>
     </body>
 </body>
 </html>
@@ -235,7 +271,6 @@
 
     <header>
         <div class="zezo1">
-        <img src="ls2.jpg" alt="essa e a imagem">
         <div class="texto-sobre-imagem">
         </div>
     </div>
