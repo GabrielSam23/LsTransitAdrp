@@ -144,11 +144,16 @@
   .container {
     flex-direction: column;
   }
+  .zezo1 img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1370px;
+  }
 }
 
 
     @media screen and (min-width: 1024px) {
-  .painel2 .flex {
+  .painel2 .flex{
     flex-direction: row;
   }
 }
@@ -162,6 +167,7 @@
         }
 
         .container {
+            position: relative;
   display: flex;
   justify-content: space-around;
   padding: 20px;
@@ -195,7 +201,15 @@
   width: 100px;
   height: 100px;
 }
-    </style>
+    
+    .zezo1 {
+        position: absolute;
+        bottom: -189%;
+        left: 0;
+        width: 100%;
+        filter: brightness(0.5); 
+    }
+</style>
     </style>
 </head>
 <body>
@@ -220,9 +234,15 @@
     </div>
 
     <header>
+        <div class="zezo1">
+        <img src="ls2.jpg" alt="essa e a imagem">
+        <div class="texto-sobre-imagem">
+        </div>
+    </div>
+</div>
         <div class="painel">
            <iframe src="a.html" width="1750px" height="600px" frameborder="0" scrolling="no"></iframe>
-           <div class="container">
+    <div class="container">
   <div class="icon-text">
     <a href="#">
       <img src="caminho/para/sua/imagem1.png" alt="Imagem 1">
@@ -250,54 +270,9 @@
       <i class="fas fa-user-tie"></i>
       <p>EXPERIENCED DRIVERS</p>
     </a>
-            <div class="titulo">
-                <h1></h1>
-                <p></p>
-            </div>
-            <div class="linhas">
-                <p></p>
-                <p></p>
-            </div>
-            <nav>
-                <ul class="abas">
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="pagina-inicial">
-        <div class="bloco-roxo">
-            <div class="logo-empresa">
-                <img src="" alt="">
-            </div>
-                </div>
-            </div>
-        </div>
-        <!-- Resto da sua seção de apresentação da empresa aqui -->
-    </section>
-
-    <section id="linhas" style="display: none;">
-      <div class="container2">
-        <a href="linha-77.html" class="imagemesquerda">
-            <br>
-            <img src="lstransit1v2.png" alt="Imagem à esquerda">
-        </a>
-        <a href="linha-747.html" class="imagemcentro">
-            <br>
-            <img src="lstransit2.png" alt="Imagem central">
-        </a>
-        <a href="linha-4.html" class="imagemdireita">
-            <br>
-            <img src="linha4.png" alt="Imagem à direita">
-        </a>
-    </div>
-    </section>
-
-    <section id="serviços" style="display: none;">
-        <div class="serviços">
-            <img src="layoutservice.png">
-
-    </section>
+  </div>
+</div>
+</div>
 
     <script>
    // Defina um array com as URLs das imagens que deseja usar
