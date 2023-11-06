@@ -137,23 +137,22 @@
 }
 
 
-    @media screen and (min-width:767px){
-        .flex{
-            flex-direction: column-reverse;
-        }
-    }
+   @media screen and (max-width: 767px) {
+  .flex {
+    flex-direction: column;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
 
-    @media screen and (max-width:1920px){
-       .painel2
-         .flex{
-            flex-direction: column-reverse;
-        }
-            
-            @media screen and (max-width:1920px){
-       .painel2
-         .flex{
-            flex-direction: column-reverse;
-        }
+
+    @media screen and (min-width: 1024px) {
+  .painel2 .flex {
+    flex-direction: row;
+  }
+}
+
             
         iframe{
             max-width: 100%;
@@ -161,6 +160,41 @@
             width: px;
             aspect-ratio: 2/3;
         }
+
+        .container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: indianred; /* cor de fundo amarela */
+  margin-bottom: -100px;
+}
+.icon-text {
+  flex-grow: 1;
+  text-align: center;
+  border-right: 1px solid white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  height: auto;
+}
+.icon-text:last-child {
+  border-right: none;
+}
+.icon-text a {
+  display: block;
+  padding: 20px;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+}
+.icon-text:active {
+  transform: scale(0.95); /* animação ao clicar */
+}
+.icon-text:hover {
+  background-color: white; /* cor de fundo branco ao passar o cursor */
+}
+.icon-text img {
+  width: 100px;
+  height: 100px;
+}
     </style>
     </style>
 </head>
@@ -188,7 +222,34 @@
     <header>
         <div class="painel">
            <iframe src="a.html" width="1750px" height="600px" frameborder="0" scrolling="no"></iframe>
-            <img src="" class="alterar">=
+           <div class="container">
+  <div class="icon-text">
+    <a href="#">
+      <img src="caminho/para/sua/imagem1.png" alt="Imagem 1">
+      <i class="fas fa-hard-hat"></i>
+      <p>WORKER PROCESS</p>
+    </a>
+  </div>
+  <div class="icon-text">
+    <a href="#">
+      <img src="busvermelho.png" alt="Imagem 2">
+      <i class="fas fa-handshake"></i>
+      <p>COLLABORATE TEAMWORK</p>
+    </a>
+  </div>
+  <div class="icon-text">
+    <a href="#">
+      <img src="caminho/para/sua/imagem3.png" alt="Imagem 3">
+      <i class="fas fa-comments"></i>
+      <p>FAST RESPONSE TIME</p>
+    </a>
+  </div>
+  <div class="icon-text">
+    <a href="#">
+      <img src="caminho/para/sua/imagem4.png" alt="Imagem 4">
+      <i class="fas fa-user-tie"></i>
+      <p>EXPERIENCED DRIVERS</p>
+    </a>
             <div class="titulo">
                 <h1></h1>
                 <p></p>
