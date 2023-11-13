@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-section {
+  width: 35%;
+  background-image: url('Screenshot_125.png');
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.text-section {
+  width: 50%;
+  background-color: #f0f0f0;
+  padding: 50px 20px 20px 20px;
+  margin-right: 200px;
+}
+
+h2 {
+  color: black;
+  width: 200px;
+  margin-top: -10px;
+  margin-left: 300px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+</style>
+<script>
+function showFullText() {
+  var textSection = document.querySelector('.text-section');
+  textSection.innerHTML = `
+    <h2>Los Santos Transit</h2>
+    <p>A Los Santos Transit é uma empresa fundada em 2001, que desde então vem servindo aos cidadãos um excelente meio de transporte; operando pela cidade e arredores, contamos com uma grande frota de táxis e ônibus, incluindo vans acessíveis para cadeiras de rodas.</p>
+    <p>A empresa tem como objetivo fornecer um serviço de transporte seguro, confiável e acessível para todos os moradores de Los Santos. Nossos motoristas são treinados e experientes, garantindo uma viagem confortável e tranquila para os passageiros.</p>
+    <p>Além disso, estamos comprometidos com a sustentabilidade e a redução das emissões de carbono. Estamos constantemente atualizando nossa frota para veículos mais eficientes e ecologicamente corretos.</p>
+    <p>Se você está procurando um meio de transporte confiável e conveniente em Los Santos, não procure mais do que a Los Santos Transit. Estamos aqui para atender às suas necessidades de transporte e tornar sua viagem pela cidade uma experiência agradável.</p>
+  `;
+}
+</script>
+</head>
+<body>
+
+<div class="container">
+  <div class="image-section"></div>
+  <div class="text-section">
+    <h2>LOS SANTOS TRANSIT</h2>
+    <p>A Los Santos Transit é uma empresa fundada em 2001, que desde então vem servindo aos cidadãos um excelente meio de transporte; operando pela cidade e arredores, contamos com uma grande frota de táxis e ônibus, incluindo vans acessíveis para cadeiras de rodas.</p>
+    <button class="button" onclick="showFullText()">Ler Mais</button>
+  </div>
+</div>
+
+</body>
+</html>

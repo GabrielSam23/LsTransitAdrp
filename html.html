@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+          .imagem img {
+        position: relative;
+        width: 100%;
+        top: 100%;
+        margin-top: -12px;
+        max-height: px; /* Alterei de height para max-height */
+    }
+
+    .texto-sobre-imagem {
+        position: absolute;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        max-width: 60%; /* Defina a largura máxima desejada */
+        word-wrap: break-word; /* Para quebras de palavra */
+    }
+
+    .imagem-pequena {
+        position: absolute;
+        top: 10px; /* Ajuste conforme necessário */
+        right: 10px; /* Ajuste conforme necessário */
+        width: 50px; /* Ajuste conforme necessário */
+        height: 50px; /* Ajuste conforme necessário */
+    }
+
+    .imagem-pequena img {
+        width: 400px;
+        height: auto;
+        border-radius: 1%; /* Para tornar a imagem pequena circular, se necessário */
+        margin-left: -400px;
+        top: 50px;
+    }
+
+    h2 {
+        font-family: "robotobold", sans-serif;
+        top: 50px;
+        color: red;
+    }
+
+    h1 {
+        font-family: "arimoregular", sans-serif;
+        font-size: 20px;
+    }
+</style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imagem">
+            <img src="mid-back2.png" alt="Descrição da imagem">
+            <div class="texto-sobre-imagem">
+                <h2>Los Santos Transit</h2>
+                <h1>Se você é um residente local ou turista viajante, nossos motoristas de táxi de Los Angeles sabem que a segurança é de extrema importância. Cada um dos nossos motoristas é totalmente licenciado, segurado e passou por uma extensa verificação de antecedentes. Eles são experientes em dirigir por toda Los Angeles e se orgulham de fazer as rotas mais seguras e rápidas.<br>Adicionalmente, estamos comprometidos em fornecer um serviço de qualidade, priorizando a satisfação e conforto de nossos clientes.</h1>
+            </div>
+            <div class="imagem-pequena">
+                <img src="chato.png" alt="Descrição da imagem pequena">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
